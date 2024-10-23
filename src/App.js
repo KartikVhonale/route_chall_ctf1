@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {Route, Routes } from 'react-router-dom';
+import Iam from './components/Iam.jsx';
+import Veer from './components/Veer.jsx';
+import So from './components/So.jsx';
+import Vijay from './components/Vijay.jsx';
+import './styles.css'; // Import styles
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    return (
+            <Routes>
+                <Route index element={<Iam/> }/>
+                <Route path="/veer" element={<Veer/>} />
+                <Route path="/something" element={<So/>} />
+                <Route path="/vijay" element={<Vijay/>} />
+            </Routes>
+            // <>
+            // <Iam/>
+            // </>
+    );
+};
 
 export default App;
